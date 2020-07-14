@@ -6,7 +6,7 @@ export default {
   * */
   choosePage(current,size,teacherQuery){
     return request({
-      url: `/edu/teacher/choosepage/${current}/${size}`,
+      url: `/eduservice/teacher/choosepage/${current}/${size}`,
       method: 'post',
       data: teacherQuery
     })
@@ -14,14 +14,14 @@ export default {
   // 通过ID删除讲师
   deleteById(id){
     return request({
-      url: `/edu/teacher/${id}`,
+      url: `/eduservice/teacher/${id}`,
       method: 'delete', 
     })
   },
   //添加讲师
   add(teacher){
     return request({
-      url: `/edu/teacher/add`,
+      url: `/eduservice/teacher/add`,
       method: 'post',
       data: teacher
     })
@@ -29,14 +29,14 @@ export default {
   // 根据id查询讲师
   selectById(id){
     return request({
-      url: `/edu/teacher/${id}`,
+      url: `/eduservice/teacher/${id}`,
       method: 'get'
     })
   },
   // 根据id修改讲师
   updateById(teacher){
     return request({
-      url: `/edu/teacher`,
+      url: `/eduservice/teacher`,
       method: 'put',
       data: teacher
     })
